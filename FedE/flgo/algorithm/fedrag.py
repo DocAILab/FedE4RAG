@@ -49,7 +49,7 @@ class Server(BasicServer):
                 if self.current_round >= 0:
                     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
                     filename = f"x-model_{current_time}_round{self.current_round}.bin"
-                    save_path = os.path.join("/root/autodl-tmp/0401_1000", filename)
+                    save_path = os.path.join("/path/to/save/model", filename)
                     torch.save(self.model.model.state_dict(), save_path)
                 self.current_round += 1
                 # decay learning rate
