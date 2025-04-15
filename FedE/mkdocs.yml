@@ -1,0 +1,177 @@
+site_name: "FLGo"
+
+nav:
+  - "Get Started": getting_started.md
+  - "Overview":
+    - Overview/index.md
+    - Architecture:
+      - Overview/Architecture/index.md
+      - Benchmark: Overview/Architecture/benchmark.md
+      - Algorithm: Overview/Architecture/algorithm.md
+      - Experiment: Overview/Architecture/experiment.md
+      - Simulator: Overview/Architecture/simulator.md
+  - "Docs":
+    - Docs/FLGo.md
+    - flgo.algorithm: 
+      - Docs/algorithm/index.md
+      - flgo.algorithm.fedbase: Docs/algorithm/fedbase.md
+      - flgo.algorithm.vflbase: Docs/algorithm/vflbase.md
+      - flgo.algorithm.hierarchical: Docs/algorithm/hierarchical.md
+      - flgo.algorithm.decentralized: Docs/algorithm/decentralized.md
+
+    - flgo.benchmark: 
+      - Docs/benchmark/index.md
+      - flgo.benchmark.base: Docs/benchmark/base.md
+      - flgo.benchmark.toolkits:
+        - flgo.benchmark.toolkits.cv:
+          - Docs/benchmark/toolkits/cv/index.md
+          - classification: Docs/benchmark/toolkits/cv/classification.md
+          - segmentation: Docs/benchmark/toolkits/cv/segmentation.md
+          - detection: Docs/benchmark/toolkits/cv/detection.md
+        - flgo.benchmark.toolkits.nlp:
+          - Docs/benchmark/toolkits/nlp/index.md
+          - classification: Docs/benchmark/toolkits/nlp/classification.md
+          - language_modeling: Docs/benchmark/toolkits/nlp/language_modeling.md
+          - translation: Docs/benchmark/toolkits/nlp/translation.md
+        - flgo.benchmark.toolkits.graph:
+          - Docs/benchmark/toolkits/graph/index.md
+          - node_classification: Docs/benchmark/toolkits/graph/node_classification.md
+          - graph_classification: Docs/benchmark/toolkits/graph/graph_classification.md
+          - link_prediction: Docs/benchmark/toolkits/graph/link_prediction.md
+        - flgo.benchmark.toolkits.tabular: Docs/empty.md
+        - flgo.benchmark.toolkits.partition: Docs/benchmark/toolkits/parition.md
+        - flgo.benchmark.toolkits.visualization: Docs/benchmark/toolkits/visualization.md
+    - flgo.experiment:
+      - Docs/experiment/index.md
+      - flgo.experiment.logger:
+          - Docs/experiment/logger/BasicLogger.md
+      - flgo.experiment.analyzer: Docs/experiment/analyzer.md
+      - flgo.experiment.device_scheduler: Docs/experiment/device_scheduler.md
+    - flgo.simulator:
+      - Docs/simulator/index.md
+      - flgo.simulator.base: Docs/simulator/base.md
+      - flgo.simulator.default_simulator: Docs/simulator/default_simulator.md
+    - flgo.utils:
+      - Docs/utils/index.md
+      - flgo.utils.fflow: Docs/utils/fflow.md
+      - flgo.utils.fmodule: Docs/utils/fmodule.md
+  - "Tutorials":
+    - Tutorials/index.md
+    - 0 Quick Start:
+      - Tutorials/0_Quick_Start/index.md
+    - 1 Configuration:
+      - Tutorials/1_Configuration/index.md
+      - 1.1 FL Descriptor: Tutorials/1_Configuration/1.1_FL_Descriptor.md
+      - 1.2 Option Configuration: Tutorials/1_Configuration/1.2_Option_Configuration.md
+      - 1.3 Task Configuration: Tutorials/1_Configuration/1.3_Task_Configuration.md
+      - 1.4 Algorithm Configuration: Tutorials/1_Configuration/1.4_Algorithm_Configuration.md
+      - 1.5 Model Configuration: Tutorials/1_Configuration/1.5_Model_Configuration.md
+      - 1.6 Logger Configuration: Tutorials/1_Configuration/1.6_Logger_Configuration.md
+    - 2 Algorithm Customization:
+      - Tutorials/2_Algorithm_Customization/index.md
+      - 2.1 General Paradigm: Tutorials/2_Algorithm_Customization/2.1_General_Paradigm.md
+      - 2.2 Local Training: Tutorials/2_Algorithm_Customization/2.2_Local_Training_FedProx.md
+      - 2.3 Aggregation: Tutorials/2_Algorithm_Customization/2.3_Aggregation.md
+      - 2.4 Sampling: Tutorials/2_Algorithm_Customization/2.4_Sampling.md
+      - 2.5 Communication: Tutorials/2_Algorithm_Customization/2.5_Communication.md
+    - 3 Benchmark Customization:
+      - Tutorials/3_Benchmark_Customization/index.md
+      - 3.1 From Dataset to Benchmark: Tutorials/3_Benchmark_Customization/3.1_Quick_Customization.md
+      - 3.2 Data Heterogeneity: Tutorials/3_Benchmark_Customization/3.7_Data_Heterogeneity.md
+      - 3.3 Image: Tutorials/3_Benchmark_Customization/3.2_Image.md
+      - 3.4 Text: Tutorials/3_Benchmark_Customization/3.3_Text.md
+      - 3.5 Graph: Tutorials/3_Benchmark_Customization/3.4_Graph.md
+      - 3.6 Series: Tutorials/3_Benchmark_Customization/3.5_Series.md
+      - 3.7 Rec: Tutorials/3_Benchmark_Customization/3.6_Rec.md
+    - 4 Simulator Customization:
+      - Tutorials/4_Simulator_Customization/index.md
+      - 4.1 Client Availability: Tutorials/4_Simulator_Customization/4.1_Client_Availability.md
+      - 4.2 Client Connectivity: Tutorials/4_Simulator_Customization/4.2_Client_Connectivity.md
+      - 4.3 Client Responsiveness: Tutorials/4_Simulator_Customization/4.3_Client_Responsiveness.md
+      - 4.4 Client Completeness: Tutorials/4_Simulator_Customization/4.4_Client_Completeness.md
+      - 4.5 Varieties of FedAvg with Staleness: Tutorials/4_Simulator_Customization/4.5_Varieties_of_FedAvg_with_Staleness.md
+  - "Resources":
+    - Resources/index.md
+    - Algorithm:
+      - Usage: Resources/algorithm/index.md
+      - Classical FL: Resources/algorithm/horizontal.md
+      - Personalized FL: Resources/algorithm/personalize.md
+    - Benchmark:
+      - Usage: Resources/benchmark/index.md
+      - Image:
+#        - Resources/benchmark/Image/index.md
+        - Classification: Resources/benchmark/Image/classification.md
+        - Detection: Resources/benchmark/Image/detection.md
+        - Segmentation: Resources/benchmark/Image/segmentation.md
+      - Text:
+#        - Resources/benchmark/Text/index.md
+        - Classification: Resources/benchmark/Text/classification.md
+        - Translation: Resources/benchmark/Text/translation.md
+        - Language Modeling: Resources/benchmark/Text/language_modeling.md
+      - Graph:
+#        - Resources/benchmark/Graph/index.md
+        - Graph Classification: Resources/benchmark/Graph/graph_classification.md
+        - Node Classification: Resources/benchmark/Graph/node_classification.md
+        - Link Prediction: Resources/benchmark/Graph/link_prediction.md
+    - Simulator:
+      - Usage: Resources/simulator/index.md
+      - Horizontal: Resources/simulator/horizontal.md
+  - "About": about.md
+  - "Github": https://github.com/WwZzz/easyFL
+theme:
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+  font:
+    text: Roboto
+    code: Roboto Mono
+  name: "material"
+  direction: ltr
+  logo: img/f.png
+  favicon: img/flgo_icon.ico
+  language: en 
+  palette:
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+copyright: Copyright &copy; 2023, Zheng Wang
+extra:
+  generator: false
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: 中文
+      link: /cn/
+      lang: cn
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/WwZzz/easyFL
+      name: FLGo
+
+plugins:
+- search
+- mkdocstrings:
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
