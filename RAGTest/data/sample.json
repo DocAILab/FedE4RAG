@@ -1,0 +1,81 @@
+{
+    "key_content_novel_1": {
+        "reference": [
+            "Johnson & Johnson and Subsidiaries\n \nCondensed Consolidated Statement of Earnings \n \n(Unaudited; in Millions Except Per Share Figures)\nPercent\nPercent\nPercent\nIncrease\nAmount\nto Sales\nAmount\nto Sales\n(Decrease)\nSales to customers\n25,530\n$ \n 100.0\n24,020\n$ \n 100.0\n6.3\nCost of products sold\n 8,212\n32.2\n \n7,919\n \n33.0\n \n3.7\nGross Profit\n17,318\n \n67.8\n \n16,101\n \n67.0\n \n7.6\nSelling, marketing and administrative expenses\n 6,665\n26.1\n \n6,226\n \n25.9\n \n7.1\nResearch and development expense\n 3,829\n15.0\n \n3,703\n \n15.4\n \n3.4\nInterest (income) expense, net\n(23)\n \n (0.1)\n(26)\n \n (0.1)\n \nOther (income) expense, net*\n(60)\n \n (0.2)\n273\n \n1.1\n \n \nRestructuring\n 145\n0.5\n \n85\n \n0.4\n \n \nEarnings before provision for taxes on income\n 6,762\n26.5\n \n5,840\n \n24.3\n \n15.8\nProvision for taxes on income\n 1,618\n6.4\n \n1,026\n \n4.3\n \n57.7\nNet earnings\n5,144\n$ \n20.1\n \n4,814\n$ \n20.0\n \n6.9"
+        ],
+        "reference_idx": [
+            28941
+        ],
+        "question": "Did JnJ's net earnings as a percent of sales increase in Q2 of FY2023 compared to Q2 of FY2022?",
+        "answer": "Yes, net earnings as a percent of sales increased from 20% in Q2 of FY2022 to 20.1% in Q2 of FY2023.",
+        "question_type": "novel-generated"
+    },
+    "key_content_novel_2": {
+            "reference": [
+                "For the Full Year of Fiscal 2022\nNet sales increased 18.3% to $10.2 billion compared to $8.6 billion in fiscal 2021,\nprimarily due to the favorable impact from the continued resilience of the beauty\ncategory, retail price increases, the impact of new brands and product innovation,\nincreased social occasions, and fewer COVID-19 limitations compared to fiscal 2021.\nComparable sales increased 15.6% compared to an increase of 37.9% in fiscal 2021,\ndriven by a 10.8% increase in transactions and a 4.3% increase in average ticket.\nGross profit increased 20.1% to $4.0 billion compared to $3.4 billion in fiscal 2021. As\na percentage of net sales, gross profit increased to 39.6% compared to 39.0% in fiscal\n2021, primarily due to leverage of fixed costs, strong growth in other revenue, and\nfavorable channel mix shifts, partially offset by higher inventory shrink and lower\nmerchandise margin.\nSG&A expenses increased 16.2% to $2.4 billion compared to $2.1 billion in fiscal\n2021. As a percentage of net sales, SG&A expenses decreased to 23.5% compared to\n23.9% in fiscal 2021, primarily due to lower marketing expenses and leverage of\nincentive compensation due to higher sales, partially offset by deleverage of corporate\noverhead due to strategic investments and deleverage of store payroll and benefits\ndue to wage investments."
+            ],
+            "reference_idx": [
+                50908
+            ],
+            "question": "What drove the reduction in SG&A expense as a percent of net sales in FY2023?",
+            "answer": "Lower marketing expenses and leverage of incentive compensation due to higher sales. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.",
+            "question_type": "novel-generated"
+    },
+    "key_content_metric_1": {
+            "reference": [
+                "WalmartInc.\nConsolidatedStatementsofIncome\n \n \nFiscalYearsEndedJanuary31,\n(Amounts in millions, except per share data)\n \n2019\n \n2018\n \n2017\nRevenues:\n \n \n \nNet sales\n $\n510,329\n $\n495,761\n $\n481,317\nMembership and other income\n \n4,076\n \n4,582\n \n4,556\nTotal revenues\n \n514,405\n \n500,343\n \n485,873\nCostsandexpenses:\n \n \n \nCost of sales\n \n385,301\n \n373,396\n \n361,256\nOperating, selling, general and administrative expenses\n \n107,147\n \n106,510\n \n101,853\nOperatingincome\n \n21,957\n \n20,437\n \n22,764\nInterest:\n \n \n \nDebt\n \n1,975\n \n1,978\n \n2,044\nCapital lease and financing obligations\n \n371\n \n352\n \n323\nInterest income\n \n(217) \n(152) \n(100)\nInterest, net\n \n2,129\n \n2,178\n \n2,267\nLoss on extinguishment of debt\n \n\n \n3,136\n \n\nOther (gains) and losses\n \n8,368\n \n\n \n\nIncomebeforeincometaxes\n \n11,460\n \n15,123\n \n20,497\nProvision for income taxes\n \n4,281\n \n4,600\n \n6,204\nConsolidatednetincome\n \n7,179\n \n10,523\n \n14,293\nConsolidatednetincomeattributabletononcontrollinginterest\n \n(509) \n(661) \n(650)\nConsolidatednetincomeattributabletoWalmart\n $\n6,670\n $\n9,862\n $\n13,643\n \n \n \n \nNetincomepercommonshare:\n \n \n \nBasicnetincomepercommonshareattributabletoWalmart\n $\n2.28\n $\n3.29\n $\n4.40\nDilutednetincomepercommonshareattributabletoWalmart\n \n2.26\n \n3.28\n \n4.38\n \n \n \n \nWeighted-averagecommonsharesoutstanding:\n \n \n \nBasic\n \n2,929\n \n2,995\n \n3,101\nDiluted\n \n2,945\n \n3,010\n \n3,112\n \n \n \n \nDividendsdeclaredpercommonshare\n $\n2.08\n $\n2.04\n $\n2.00\nSee accompanying notes.\n48"
+            ],
+            "reference_idx": [
+                53204
+            ],
+            "question": "Based on the information provided primarily in the statement of income, what is the FY2018 - FY2019 change in unadjusted operating income % margin for Walmart? Answer in units of percents and round to one decimal place.",
+            "answer": "0.2%",
+            "question_type": "metrics-generated"
+    },
+    "key_content_metric_2": {
+        "reference": [
+            "Table of Contents\n62\nADOBE SYSTEMS INCORPORATED\nCONSOLIDATED STATEMENTS OF INCOME\n(In thousands, except per share data)\n \nYears Ended\n \nDecember 2,\n2016\nNovember 27,\n2015\nNovember 28,\n2014\nRevenue:\n \nSubscription\n$\n4,584,833\n$\n3,223,904\n$\n2,076,584\nProduct\n800,498\n1,125,146\n1,627,803\nServices and support\n469,099\n446,461\n442,678\nTotal revenue\n5,854,430\n4,795,511\n4,147,065\n \nCost of revenue:\nSubscription\n461,860\n409,194\n335,432\nProduct\n68,917\n90,035\n97,099\nServices and support\n289,131\n245,088\n189,549\nTotal cost of revenue\n819,908\n744,317\n622,080\n \nGross profit\n5,034,522\n4,051,194\n3,524,985\n \nOperating expenses:\nResearch and development\n975,987\n862,730\n844,353\nSales and marketing\n1,910,197\n1,683,242\n1,652,308\nGeneral and administrative\n577,710\n531,919\n543,332\nRestructuring and other charges\n(1,508)\n1,559\n19,883\nAmortization of purchased intangibles\n78,534\n68,649\n52,424\nTotal operating expenses\n3,540,920\n3,148,099\n3,112,300\n \nOperating income\n1,493,602\n903,095\n412,685\n \nNon-operating income (expense):\nInterest and other income (expense), net\n13,548\n33,909\n7,267\nInterest expense\n(70,442)\n(64,184)\n(59,732)\nInvestment gains (losses), net\n(1,570)\n961\n1,156\nTotal non-operating income (expense), net\n(58,464)\n(29,314)\n(51,309)\nIncome before income taxes\n1,435,138\n873,781\n361,376\nProvision for income taxes\n266,356\n244,230\n92,981\nNet income\n$\n1,168,782\n$\n629,551\n$\n268,395\nBasic net income per share\n$\n2.35\n$\n1.26\n$\n0.54\nShares used to compute basic net income per share\n498,345\n498,764\n497,867\nDiluted net income per share\n$\n2.32\n$\n1.24\n$\n0.53\nShares used to compute diluted net income per share\n504,299\n507,164\n508,480\n See accompanying Notes to Consolidated Financial Statements."
+        ],
+        "reference_idx": [
+            3745
+        ],
+        "question": "What is Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 (in units of percents and round to one decimal place)? Give a solution to the question by using the income statement.",
+        "answer": "65.4%",
+        "question_type": "metrics-generated"
+    },
+    "key_content_domain_1": {
+            "reference": [
+                "American Water Works Company, Inc. and Subsidiary Companies\nConsolidated Balance Sheets\n(In millions, except share and per share data)\nDecember 31, 2022\nDecember 31, 2021\nASSETS\nProperty, plant and equipment\n$\n29,736 \n$\n27,413 \nAccumulated depreciation\n(6,513)\n(6,329)\nProperty, plant and equipment, net\n23,223 \n21,084 \nCurrent assets:\n \n \nCash and cash equivalents\n85 \n116 \nRestricted funds\n32 \n20 \nAccounts receivable, net of allowance for uncollectible accounts of $60 and $75, respectively\n334 \n271 \nIncome tax receivable\n114 \n4 \nUnbilled revenues\n275 \n248 \nMaterials and supplies\n98 \n57 \nAssets held for sale\n \n683 \nOther\n312 \n155 \nTotal current assets\n1,250 \n1,554",
+                "American Water Works Company, Inc. and Subsidiary Companies\nConsolidated Balance Sheets\n(In millions, except share and per share data)\nDecember 31, 2022\nDecember 31, 2021\nCAPITALIZATION AND LIABILITIES\nCapitalization:\n \n \nCommon stock ($0.01 par value; 500,000,000 shares authorized; 187,200,539 and 186,880,413 shares\nissued, respectively)\n$\n2 \n$\n2 \nPaid-in-capital\n6,824 \n6,781 \nRetained earnings\n1,267 \n925 \nAccumulated other comprehensive loss\n(23)\n(45)\nTreasury stock, at cost (5,342,477 and 5,269,324 shares, respectively)\n(377)\n(365)\nTotal common shareholders' equity\n7,693 \n7,298 \nLong-term debt\n10,926 \n10,341 \nRedeemable preferred stock at redemption value\n3 \n3 \nTotal long-term debt\n10,929 \n10,344 \nTotal capitalization\n18,622 \n17,642 \nCurrent liabilities:\n \n \nShort-term debt\n1,175 \n584 \nCurrent portion of long-term debt\n281 \n57 \nAccounts payable\n254 \n235 \nAccrued liabilities\n706 \n701 \nAccrued taxes\n49 \n176 \nAccrued interest\n91 \n88 \nLiabilities related to assets held for sale\n \n83 \nOther\n255 \n217 \nTotal current liabilities\n2,811 \n2,141"
+            ],
+            "reference_idx": [
+                11786,
+                11787
+            ],
+            "question": "Does American Water Works have positive working capital based on FY2022 data? If working capital is not a useful or relevant metric for this company, then please state that and explain why.",
+            "answer": "Yes. American Water Works had postivie working capital of $ 124Mn by FY 2022.",
+            "question_type": "domain-relevant"
+    },
+    "key_content_domain_2": {
+            "reference": [
+                "Consolidated Balance Sheets\n \nDecember 31,\n2022\nDecember 25,\n2021\n \n(In millions, except par value amounts)\nASSETS\nCurrent assets:\nCash and cash equivalents\n$\n4,835 \n$\n2,535 \nShort-term investments\n1,020 \n1,073 \nAccounts receivable, net\n4,126 \n2,706 \nInventories\n3,771 \n1,955 \nReceivables from related parties\n2 \n2 \nPrepaid expenses and other current assets\n1,265 \n312 \nTotal current assets\n15,019 \n8,583 \nProperty and equipment, net\n1,513 \n702 \nOperating lease right-of-use assets\n460 \n367 \nGoodwill\n24,177 \n289 \nAcquisition-related intangibles\n24,118 \n \nInvestment: equity method\n83 \n69 \nDeferred tax assets\n58 \n931 \nOther non-current assets\n2,152 \n1,478 \nTotal assets\n$\n67,580 \n$\n12,419 \nLIABILITIES AND STOCKHOLDERS EQUITY\nCurrent liabilities:\nAccounts payable\n$\n2,493 \n$\n1,321 \nPayables to related parties\n463 \n85 \nAccrued liabilities\n3,077 \n2,424 \nCurrent portion of long-term debt, net\n \n312 \nOther current liabilities\n336 \n98 \nTotal current liabilities\n6,369 \n4,240 \nLong-term debt, net of current portion\n2,467 \n1 \nLong-term operating lease liabilities\n396 \n348 \nDeferred tax liabilities\n1,934 \n12 \nOther long-term liabilities\n1,664 \n321 \nCommitments and Contingencies (see Notes 16 and 17)\nStockholders equity:\nCapital stock:\nCommon stock, par value $0.01; shares authorized: 2,250; shares issued: 1,645 and 1,232; shares\noutstanding: 1,612 and 1,207\n16 \n12 \nAdditional paid-in capital\n58,005 \n11,069 \nTreasury stock, at cost (shares held: 33 and 25)\n(3,099)\n(2,130)\nAccumulated deficit\n(131)\n(1,451)\nAccumulated other comprehensive loss\n(41)\n(3)\nTotal stockholders equity\n54,750 \n7,497 \nTotal liabilities and stockholders equity\n$\n67,580 \n$\n12,419"
+            ],
+            "reference_idx": [
+                9846
+            ],
+            "question": "Does AMD have a reasonably healthy liquidity profile based on its quick ratio for FY22? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+            "answer": "Yes. The quick ratio is 1.57, calculated as (cash and cash equivalents+Short term investments+Accounts receivable, net+receivables from related parties)/ (current liabilities).",
+            "question_type": "domain-relevant"
+    },
+    "key_content_domain_3": {
+            "reference": [
+                "At December 31,\nMaturities \nInterest \nRates %\n2022\n2021 \nVerizon Communications\n< 5 Years\n0.75 - 5.82\n$ \n23,929 \n$ \n18,406 \n5-10 Years\n1.50 - 7.88\n42,637 \n43,225 \n> 10 Years\n1.13 - 8.95\n60,134 \n73,520 \n< 5 Years\nFloating\n(1) \n2,992 \n4,086 \n5-10 Years\nFloating\n(1) \n3,029 \n824 \nAlltel Corporation\n5-10 Years\n6.80 - 7.88\n94 \n38 \n> 10 Years\nN/A\nN/A \n58 \nOperating telephone company subsidiariesdebentures\n< 5 Years\nN/A\nN/A \n141 \n5-10 Years\n6.00 - 8.75\n475 \n375 \n> 10 Years\n5.13 - 7.38\n139 \n250 \nOther subsidiariesasset-backed debt\n< 5 Years\n0.41 - 5.72\n9,767 \n9,620 \n< 5 Years\nFloating\n(2) \n10,271 \n4,610 \nFinance lease obligations (average rate of 2.5% and 2.2% in \n2022 and 2021, respectively)\n1,732 \n1,325 \nUnamortized discount, net of premium\n(4,039) \n(4,922) \nUnamortized debt issuance costs\n(671) \n(688) \nTotal long-term debt, including current maturities\n150,489 \n150,868 \nLess long-term debt maturing within one year\n9,813 \n7,443 \nTotal long-term debt\n$ \n140,676 \n$ \n143,425 \nLong-term debt maturing within one year\n$ \n9,813 \n$ \n7,443 \nAdd commercial paper\n150 \n \nDebt maturing within one year\n9,963 \n7,443 \nAdd long-term debt\n140,676 \n143,425 \nTotal debt\n$ \n150,639 \n$ \n150,868"
+            ],
+            "reference_idx": [
+                52196
+            ],
+            "question": "Has Verizon increased its debt on balance sheet between 2022 and the 2021 fiscal period?",
+            "answer": "No. Verizon's debt decreased by $229 million.",
+            "question_type": "domain-relevant"
+    }
+}

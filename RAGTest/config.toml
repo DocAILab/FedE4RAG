@@ -1,0 +1,32 @@
+[api_keys]
+api_key = 
+api_base = "https://api.gpt.ge/v1/"
+api_name = "deepseek-r1:7b"
+auth_token = 
+
+
+[settings]
+llm = "deepseek-r1:7b"
+embeddings = {embedding path}
+split_type = "sentence"
+chunk_size = 2048
+dataset = "json_download"
+source_dir = "../wiki"
+persist_dir = "storage"
+llamaIndexEvaluateModel = "Qwen/Qwen1.5-7B-Chat-GPTQ-Int8"
+deepEvalEvaluateModel = "Qwen/Qwen1.5-7B-Chat-GPTQ-Int8"
+upTrainEvaluateModel = "qwen:7b-chat-v1.5-q8_0"
+evaluateApiName = ""
+evaluateApiKey = ""
+evaluateApiBase = ""
+output = ""
+n = 100
+test_init_total_number_documents = 20
+extra_number_documents = 20
+extra_rate_documents = 0.1
+test_all_number_documents = 40
+experiment_1 = false
+retriever = "Vector"
+retriever_mode = 0
+postprocess_rerank = "long_context_reorder"
+query_transform = "none"
