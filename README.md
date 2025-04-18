@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 #### Downstream Question & Answer Environment
 
-Create a Virtual Environment via conda(Recommended)：
+Create a Virtual Environment via conda (Recommended)：
 
 ```bash
 conda create -n Fedrag-test python=3.11
@@ -72,3 +72,6 @@ bash run.sh
 
 ```
 
+## Acknowledgements
+
+This project draws inspiration from and incorporates code elements of the FLGo project (https://github.com/WwZzz/easyFL).  We are grateful for the contributions and insights provided by the FLGo development team, which have been instrumental in advancing our project's development in the federated learning domain.
