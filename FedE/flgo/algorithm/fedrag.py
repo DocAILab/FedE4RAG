@@ -21,12 +21,6 @@ class Server(BasicServer):
             self.gv.logger.time_start('Eval Time Cost')
             # self.gv.logger.log_once()
             self.gv.logger.time_end('Eval Time Cost')
-        # current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        # filename = f"x-model_{current_time}_1.bin"
-        # torch.save(self.model, filename)
-        # current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        # filename = f"x-model_{current_time}_2.bin"
-        # torch.save(self.model.state_dict(), filename)
         while True:
             if self._if_exit(): break
             self.gv.clock.step()
@@ -44,7 +38,6 @@ class Server(BasicServer):
                 # check if early stopping
                 if self.gv.logger.early_stop(): break
 
-                # if self.current_round % 5 == 0:
                 # # TODO 保存模型
                 if self.current_round >= 0:
                     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -108,8 +101,6 @@ class Client(BasicClient):
             client_loss, client_only, server_only = self.calculator.compute_client_loss(server_loss, local_model,
                                                                                         batch_data)
             # client_loss, client_only, server_only = self.calculator.compute_client_loss(local_model, batch_data)
-
-            # print(batch_data[1])
             print(
                 f"client running:{iter}/{self.num_steps}, client loss: {client_loss}, loss 1: {client_only}, loss 2: {server_only}")
 

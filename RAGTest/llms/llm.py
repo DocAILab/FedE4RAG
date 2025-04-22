@@ -24,7 +24,7 @@ llm_dict = {
 def get_openai(api_base,api_key,api_name):
     return OpenAI(api_key=api_key,api_base=api_base, temperature=0,model=api_name)
 
-ollama_url = "http://223.70.119.218:20012"
+ollama_url = "ollama url"
 os.environ['OLLAMA_HOST'] = ollama_url
 def get_llm(name):
     if name in llm_dict.keys():

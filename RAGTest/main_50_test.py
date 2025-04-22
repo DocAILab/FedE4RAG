@@ -27,8 +27,8 @@ def seed_everything(seed):
     torch.backends.cudnn.deterministic = True
 seed_everything(42)
 
-name = "https://api.chatanywhere.com.cn/v1"
-auth_token = "sk-NX84YsnF5W8JxX18D62wyyRgKMmAkikWgg5FsETkRvLMQ74W"
+name = "Your LLM api"
+auth_token = "Your api key"
 
 
 
