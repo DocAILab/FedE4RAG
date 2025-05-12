@@ -69,7 +69,15 @@ bash run.sh
 ## Citation
 
 ```c
-
+@misc{mao2025privacypreservingfederatedembeddinglearning,
+      title={Privacy-Preserving Federated Embedding Learning for Localized Retrieval-Augmented Generation}, 
+      author={Qianren Mao and Qili Zhang and Hanwen Hao and Zhentao Han and Runhua Xu and Weifeng Jiang and Qi Hu and Zhijun Chen and Tyler Zhou and Bo Li and Yangqiu Song and Jin Dong and Jianxin Li and Philip S. Yu},
+      year={2025},
+      eprint={2504.19101},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.19101}, 
+}
 ```
 
 ## Acknowledgements
