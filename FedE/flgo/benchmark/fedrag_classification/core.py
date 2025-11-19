@@ -131,7 +131,7 @@ class TaskCalculator(GeneralCalculator):
         self.DataLoader = torch.utils.data.DataLoader
         self.criterion = torch.nn.CrossEntropyLoss()
         # TODO 加载模型
-        self.tokenizer = BertTokenizer.from_pretrained('/path/to/bge-en')
+        self.tokenizer = BertTokenizer.from_pretrained('BAAI/bge-small-en-v1.5')
 
     def compute_client_loss(self, server_logits, model, batch_data):
         questions = batch_data[0]

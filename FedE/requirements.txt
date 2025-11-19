@@ -1,10 +1,12 @@
-torch==2.1.0
-torchvision==0.16
-torchaudio==2.1.0
-torchtext==0.16.0
+torch
+torchvision
+torchaudio
+torchtext
 scipy
 matplotlib
 prettytable
 ujson
 pyyaml
 pynvml
+transformers
+accelerate
