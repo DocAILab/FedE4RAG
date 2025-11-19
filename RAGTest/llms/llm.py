@@ -1,33 +1,47 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-import torch
-from llama_index.llms.huggingface import HuggingFaceLLM
+from llama_index.llms.openai import OpenAI
 
-def get_llm(model_name="meta-llama/Llama-2-7b-chat-hf"):
-    """
-    Loads a 4-bit quantized version of a Llama 8B model from Hugging Face.
-    """
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_compute_dtype=torch.float16,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_use_double_quant=True,
-    )
+from llms.huggingface_model import get_huggingfacellm
+from llms import chatglm4
+from embs import chatglmemb
+from config import Config
+from llama_index.llms.ollama import Ollama
+import os
 
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        device_map="auto",
-        quantization_config=quantization_config,
-        trust_remote_code=True
-    )
+llm_dict = {
+    "llama": "meta-llama/Llama-2-7b-chat-hf",
+    "chatglm": "THUDM/chatglm3-6b",
+    "qwen": "Qwen/Qwen1.5-7B-Chat",
+    "qwen14_int8": "Qwen/Qwen1.5-14B-Chat-GPTQ-Int8",
+    "qwen7_int8": "Qwen/Qwen1.5-7B-Chat-GPTQ-Int8",
+    "qwen1.8": "Qwen/Qwen1.5-1.8B-Chat",
+    "baichuan": "baichuan-inc/Baichuan2-7B-Chat",
+    "falcon": "tiiuae/falcon-7b-instruct",
+    "mpt": "mosaicml/mpt-7b-chat",
+    "yi": "01-ai/Yi-6B-Chat",
+}
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
-    llm = HuggingFaceLLM(
-        model=model,
-        tokenizer=tokenizer,
-        max_new_tokens=256,
-        generate_kwargs={"temperature": 0.1, "do_sample": False},
-        query_wrapper_prompt=None, # No query wrapper prompt
-    )
+def get_openai(api_base,api_key,api_name):
+    return OpenAI(api_key=api_key,api_base=api_base, temperature=0,model=api_name)
 
-    return llm
+ollama_url = "ollama url"
+os.environ['OLLAMA_HOST'] = ollama_url
+def get_llm(name):
+    if name in llm_dict.keys():
+        return get_huggingfacellm(llm_dict[name])
+    elif name == 'chatgpt-3.5':
+        return get_openai(Config().api_base,Config().api_key,Config().api_name)
+    elif name == 'gpt-4o-mini':
+        return get_openai(Config().api_base,Config().api_key,Config().api_name)
+    elif name == 'Llama3.1:8B':
+        return Ollama(model="Llama3.1:8B", request_timeout=3600, base_url=ollama_url)
+    elif name == 'deepseek-r1:7b':
+        return Ollama(model="deepseek-r1:7b", request_timeout=3600, base_url=ollama_url)
+    elif name == 'openthinker:latest':
+        return Ollama(model="openthinker:latest", request_timeout=3600, base_url=ollama_url)
+    elif name == 'mathstral:latest':
+        return Ollama(model="mathstral:latest", request_timeout=3600, base_url=ollama_url)
+    else:
+        raise ValueError(f"no model name: {name}.")
+
+

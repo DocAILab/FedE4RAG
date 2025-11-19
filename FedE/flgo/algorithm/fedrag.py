@@ -42,8 +42,7 @@ class Server(BasicServer):
                 if self.current_round >= 0:
                     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
                     filename = f"x-model_{current_time}_round{self.current_round}.bin"
-                    os.makedirs("./outputs", exist_ok=True)
-                    save_path = os.path.join("./outputs", filename)
+                    save_path = os.path.join("/path/to/save/model", filename)
                     torch.save(self.model.model.state_dict(), save_path)
                 self.current_round += 1
                 # decay learning rate
@@ -85,15 +84,11 @@ class Server(BasicServer):
         return model_old
 
 
-from torch.cuda.amp import GradScaler, autocast
-
-
 class Client(BasicClient):
     def train(self, model, local_model):
         local_model.train()
         optimizer = self.calculator.get_optimizer(local_model, lr=self.learning_rate, weight_decay=self.weight_decay,
                                                   momentum=self.momentum)
-        scaler = GradScaler()
 
         model.to(self.device)
         local_model.to(self.device)
@@ -101,18 +96,16 @@ class Client(BasicClient):
         for iter in range(self.num_steps):
             batch_data = self.get_batch_data()
             local_model.zero_grad()
-            with autocast():
-                # Todo baseline 上增加 server_loss
-                server_loss = self.calculator.compute_server_loss(model, batch_data)
-                client_loss, client_only, server_only = self.calculator.compute_client_loss(server_loss, local_model,
-                                                                                            batch_data)
-                # client_loss, client_only, server_only = self.calculator.compute_client_loss(local_model, batch_data)
+            # Todo baseline 上增加 server_loss
+            server_loss = self.calculator.compute_server_loss(model, batch_data)
+            client_loss, client_only, server_only = self.calculator.compute_client_loss(server_loss, local_model,
+                                                                                        batch_data)
+            # client_loss, client_only, server_only = self.calculator.compute_client_loss(local_model, batch_data)
             print(
                 f"client running:{iter}/{self.num_steps}, client loss: {client_loss}, loss 1: {client_only}, loss 2: {server_only}")
 
-            scaler.scale(client_loss).backward()
-            scaler.step(optimizer)
-            scaler.update()
+            client_loss.backward()
+            optimizer.step()
 
             if iter == self.num_steps - 1:
                 print(f"server loss: {server_loss}")

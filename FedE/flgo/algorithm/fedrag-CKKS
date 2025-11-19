@@ -18,7 +18,7 @@ class Server(BasicServer):
         super().__init__(*args, **kwargs)
         
         # 生成CKKS上下文和密钥
-        self.poly_modulus_degree = 8192  # 存储多项式模次数
+        self.poly_modulus_degree = 4096  # 存储多项式模次数
         self.context = self.create_ckks_context()
         self.secret_key = self.context.secret_key()
         self.context.make_context_public()  # 移除私钥信息，只保留公钥
@@ -104,10 +104,10 @@ class Server(BasicServer):
 
     def create_ckks_context(self):
         """创建CKKS加密上下文"""
-        # 这些是CKKS的参数，您可能需要根据您的需求调整
+        # WARNING: These parameters have been aggressively reduced for low-RAM environments (12GB) and may lead to reduced security (below 128-bit level) and lower computation precision.
         poly_modulus_degree = self.poly_modulus_degree
-        coeff_mod_bit_sizes = [60, 40, 40, 60]
-        scale = 2**40
+        coeff_mod_bit_sizes = [40, 20, 40]
+        scale = 2**20
         
         context = ts.context(
             ts.SCHEME_TYPE.CKKS,
@@ -236,7 +236,7 @@ class Client(BasicClient):
         # 调用父类的初始化方法
         super().__init__(*args, **kwargs)
         self.server_context = None
-        self.poly_modulus_degree = 8192  # 与服务器相同的多项式模次数
+        self.poly_modulus_degree = 4096  # 与服务器相同的多项式模次数
         self.client_context = self.create_ckks_context()
         self.client_id = kwargs.get("client_id", 0)
 
@@ -274,10 +274,10 @@ class Client(BasicClient):
     
     def create_ckks_context(self):
         """创建CKKS加密上下文"""
-        # 这些是CKKS的参数，您可能需要根据您的需求调整
+        # WARNING: These parameters have been aggressively reduced for low-RAM environments (12GB) and may lead to reduced security (below 128-bit level) and lower computation precision.
         poly_modulus_degree = self.poly_modulus_degree
-        coeff_mod_bit_sizes = [60, 40, 40, 60]
-        scale = 2**40
+        coeff_mod_bit_sizes = [40, 20, 40]
+        scale = 2**20
         
         context = ts.context(
             ts.SCHEME_TYPE.CKKS,

@@ -12,6 +12,6 @@ config = {'benchmark': {'name': 'flgo.benchmark.fedrag_classification'},
 if not os.path.exists(task): flgo.gen_task(config, task_path=task)
 
 fedavg_runner = flgo.init(task=task, algorithm=fedrag,
-                          option={'num_rounds': 25, 'num_epochs': 1, 'gpu': '', 'batch_size': 1,
+                          option={'num_rounds': 25, 'num_epochs': 1, 'gpu': 0, 'batch_size': 8,
                                   "learning_rate": 0.00001})
 fedavg_runner.run()
