@@ -8,9 +8,7 @@ from llms.llm import get_llm
 from index import get_index
 from embs.embedding import get_embedding
 from data.qa_loader import get_qa_dataset
-from config import Config
 from retriever import get_retriver, response_synthesizer
-from eval.evaluate_rag import NLGEvaluate
 from llama_index.core.query_engine import RetrieverQueryEngine
 
 def seed_everything(seed):
@@ -32,23 +30,22 @@ def main():
     args = parser.parse_args()
 
     seed_everything(42)
-    cfg = Config()
 
     print(f"Loading model from: {args.model_path}")
     embeddings = get_embedding(args.model_path)
 
-    qa_dataset = get_qa_dataset(cfg.dataset)
-    llm = get_llm(cfg.llm)
+    qa_dataset = get_qa_dataset("100_all")
+    llm = get_llm()
 
-    Settings.chunk_size = cfg.chunk_size
+    Settings.chunk_size = 512
     Settings.llm = llm
     Settings.embed_model = embeddings
 
     persist_dir = f"./index_cache-{os.path.basename(args.model_path)}"
-    index, hierarchical_storage_context = get_index(qa_dataset, persist_dir, split_type=cfg.split_type, chunk_size=cfg.chunk_size)
+    index, hierarchical_storage_context = get_index(qa_dataset, persist_dir, split_type="sentence", chunk_size=512)
 
     query_engine = RetrieverQueryEngine(
-        retriever=get_retriver(cfg.retriever, index, hierarchical_storage_context=hierarchical_storage_context),
+        retriever=get_retriver("AutoMerging", index, hierarchical_storage_context=hierarchical_storage_context),
         response_synthesizer=response_synthesizer(0),
     )
 
